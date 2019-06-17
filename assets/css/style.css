@@ -1,0 +1,52 @@
+body{
+
+    background: burlywood;
+    margin-top: 30px;
+    
+}
+
+header{
+
+    background: rebeccapurple;
+    color:white;
+    text-align: center;
+    font-size: 40px;
+    margin: 30px;
+}
+
+h1{
+
+    background:olive;
+    font-display: black;
+    margin: 50px;
+    
+
+}
+
+h2{
+
+    margin:60px;
+}
+
+p{
+
+    margin:60px;
+}
+
+label{
+
+    margin-left:60px;
+    margin-top:30px;
+}
+
+#letters{
+    margin-left:60px;
+    width:200px;
+    margin-top:10px;
+}
+
+#button{
+
+    margin-left:60px;
+    margin-top:10px;
+}

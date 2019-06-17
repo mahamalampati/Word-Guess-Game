@@ -1,5 +1,8 @@
 
+var $ = function(id){
 
+  return document.getElementById(id);
+}
 
 
 
@@ -28,6 +31,7 @@ var setup = function()
   
   document.getElementById("month").innerHTML = output;
   output = "";
+  
 
 }
 
@@ -37,20 +41,19 @@ var submit= function()
 {
 
     output= "";
-    userLetter=document.getElementById("letters").value;
-    document.getElementById("letters").value="";
+    userLetter=$("letters").value;
+    $("letters").value="";
 
     for( var c=0; c< answer.length; c++)
     {
-
-        
+      
         if (userLetter.toLowerCase()== letters[c])
         {
             display[c] = userLetter.toLowerCase();
             win--;
         }
         output = output + display[c]+ " ";
-        alert(letters[c]);
+        
 
         
     }
@@ -63,7 +66,7 @@ var submit= function()
     if (win < 1)
     {document.getElementById("guesses").innerHTML = "YOU WIN !!!"}
 
-    else if(attempts <1)
+    else if(attemptsLeft <1)
 
     {
       
@@ -73,10 +76,16 @@ var submit= function()
 
     else {
 
-        document.getElementById("guesses").innerHTML = " YOU HAVE "+ attemptsLeft + "guesses Left";
+        document.getElementById("guesses").innerHTML = " YOU HAVE "+ attemptsLeft + " GUESSES LEFT";
+    }
+  }
+    window.onload = function()
+
+    {
+         setup();
+         $("submit").onclick= submit;
+
     }
 
-    {window.onload= setup();}
-}
-}
+  
    

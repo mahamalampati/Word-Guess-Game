@@ -5,53 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    
+    <title>WORD GUESS GAME</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
 <body>
 
-    <div class="jumbotron">
-
-        <div class="container">
-
-            <div id="id">
-
-                <h1> GUESS A MONTH</h1>
-
-                <h2 id= "guesses"> You have 10 chances to guess</h2>
-
-                <p> Input a letter, then click guess</p>
-
-                <div>
-                    <p id="month"></p>
-                    <p id ="letters"></p>
-                    
-                    
-                    
 
 
-                </div>
+    <div class="container">
+
+        <div id="id">
+
+            <header> WORD GUESS GAME</header>
+
+            <h1> GUESS A MONTH</h1>
+
+            <h2 id="guesses"> YOU HAVE 10 CHANCES TO GUESS</h2>
+
+            <p> INPUT A LETTER, THEN CLICK GUESS</p>
+
+            <div>
 
 
-                <div class="form-group">
-                    <label for="exampleInputmonth">month</label>
-                    <input type="text" class="form-control" id="exampleInputmonth" placeholder="month">
-                </div>
+                <p id="month"></p>
 
-            
-                <button type="submit" class="btn btn-primary" onclick="submit()">Guess</button>
-                
+
+
+
+
+
             </div>
+
+
+            <div class="form-group">
+                <label for="exampleInputmonth">month</label>
+                <input type="text" class="form-control" id="letters" placeholder="month">
+            </div>
+
+
+            <button type="submit" id= "button" class="btn btn-primary" onclick="submit()">Guess</button>
 
         </div>
 
     </div>
-    <script type="text/javascript" src="game.js"></script>
+
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
 </html>
