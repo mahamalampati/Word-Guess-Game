@@ -1,5 +1,5 @@
 
-var $ = function(id){
+var game = function(id){
 
   return document.getElementById(id);
 }
@@ -40,7 +40,7 @@ var setup = function()
     output = output + display[i];
   }
   
-  document.getElementById("month").innerHTML = output;
+  game("month").innerHTML = output;
   output = "";
   
 
@@ -52,8 +52,8 @@ var submit= function()
 {
 
     output= "";
-    userWord=$("letters").value;
-    $("letters").value="";
+    userWord=game("letters").value;
+    game("letters").value="";
 
     for( var c=0; c< answer.length; c++)
     {
@@ -71,11 +71,11 @@ var submit= function()
 
     
 
-    document.getElementById("month").innerHTML = output;
+    game("month").innerHTML = output;
     output="";
     attemptsLeft--;
     if (win < 1)
-    {document.getElementById("guesses").innerHTML = "YOU WIN !!!"
+    {game("guesses").innerHTML = "YOU WIN !!!"
     
     setup();
   
@@ -87,14 +87,14 @@ var submit= function()
 
     {
       
-      document.getElementById("guesses").innerHTML ="YOU LOSE!!!";
+      game("guesses").innerHTML ="YOU LOSE!!!";
       setup();
   
     }
 
     else {
 
-        document.getElementById("guesses").innerHTML = " YOU HAVE "+ attemptsLeft + " GUESSES LEFT";
+        game("guesses").innerHTML = " YOU HAVE "+ attemptsLeft + " GUESSES LEFT";
     }
 }
 

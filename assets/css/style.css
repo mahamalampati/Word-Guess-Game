@@ -26,18 +26,34 @@ h1{
 h2{
 
     margin:60px;
+    color: brown;
 }
 
+h3{
+
+    margin-left:60px;
+    color:green;
+}
+
+li{
+
+    margin-left:60px;
+    color:yellow;
+}
 p{
 
-    margin:60px;
-}
+    margin-left:80px;
+    margin-top:60px;
 
+
+}
 label{
 
     margin-left:60px;
-    margin-top:30px;
+    color: white;
+   
 }
+
 
 #letters{
     margin-left:60px;

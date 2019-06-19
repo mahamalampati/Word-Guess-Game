@@ -26,13 +26,28 @@
             <h1> GUESS A MONTH</h1>
 
             <h2 id="guesses"> YOU HAVE 10 CHANCES TO GUESS</h2>
+            
+            <h3> Directions to play </h3>
+            
 
-            <p> INPUT A LETTER, THEN CLICK GUESS</p>
+            <ul>
+              
+                
+                <li> Input a Letter</li>
+                <li>Then Click Guess</li>
+                <li>If your Guess is Correct tha blank will be filled with the correct letter</li>
+                <li>Else it will remain blank</li>
+                <li>The Game will reset once you win or lose</li>
+
+               
+
+            </ul>
 
             <div>
 
 
                 <p id="month"></p>
+                <p id="display"></p>
 
 
 
@@ -40,13 +55,15 @@
 
 
             </div>
+        
 
+           
 
             <div class="form-group">
-                <label for="exampleInputmonth">month</label>
-                <input type="text" maxlength="1" class="form-control" id="letters" placeholder="month">
+                <label for="exampleInputmonth">Type your letter here</label>
+                <input type="text" maxlength="1" class="form-control" id="letters" placeholder="letter">
             </div>
-
+           
 
             <button type="submit" id= "button" class="btn btn-primary" onclick="submit()">Guess</button>
 
