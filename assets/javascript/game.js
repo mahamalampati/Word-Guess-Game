@@ -7,21 +7,32 @@ var $ = function(id){
 
 
 
-var month = ["january", "febraury","march","april","may","june","july","august","september","october","november","december"]
-var computerChoice = Math.floor(Math.random()*13);
-var answer = month[computerChoice];
-var myLength = answer.length;
-var display = [myLength];
-var win = myLength;
-var letters = answer.split('');
-var attemptsLeft = 10;
-var output = "";
-var userLetter = "";
+var month 
+var computerWord 
+var answer 
+var myLength 
+var display 
+var win 
+var letters 
+var attemptsLeft 
+var output 
+var userWord 
 
 
 var setup = function()
 {
+   month = ["january", "febraury","march","april","may","june","july","august","september","october","november","december"]
+   computerWord = Math.floor(Math.random()*13);
+   answer = month[computerWord];
+   myLength = answer.length;
+   display = [myLength];
+   win = myLength;
+   letters = answer.split('');
+   attemptsLeft = 10;
+   output = "";
+   userWord = "";
 
+   
   for (var i=0; i< answer.length; i++)
   {
 
@@ -41,15 +52,15 @@ var submit= function()
 {
 
     output= "";
-    userLetter=$("letters").value;
+    userWord=$("letters").value;
     $("letters").value="";
 
     for( var c=0; c< answer.length; c++)
     {
       
-        if (userLetter.toLowerCase()== letters[c])
+        if (userWord.toLowerCase()== letters[c])
         {
-            display[c] = userLetter.toLowerCase();
+            display[c] = userWord.toLowerCase();
             win--;
         }
         output = output + display[c]+ " ";
@@ -64,7 +75,9 @@ var submit= function()
     output="";
     attemptsLeft--;
     if (win < 1)
-    {document.getElementById("guesses").innerHTML = "YOU WIN !!!"}
+    {document.getElementById("guesses").innerHTML = "YOU WIN !!!"
+    
+  }
 
     else if(attemptsLeft <1)
 
@@ -78,12 +91,14 @@ var submit= function()
 
         document.getElementById("guesses").innerHTML = " YOU HAVE "+ attemptsLeft + " GUESSES LEFT";
     }
-  }
+}
+
+
     window.onload = function()
 
     {
          setup();
-         $("submit").onclick= submit;
+      
 
     }
 
