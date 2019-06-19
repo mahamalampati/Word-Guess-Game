@@ -77,13 +77,18 @@ var submit= function()
     if (win < 1)
     {document.getElementById("guesses").innerHTML = "YOU WIN !!!"
     
+    setup();
+  
   }
+
+  
 
     else if(attemptsLeft <1)
 
     {
       
       document.getElementById("guesses").innerHTML ="YOU LOSE!!!";
+      setup();
   
     }
 
